@@ -1,9 +1,24 @@
 public class String_Calculato {
-    public int calculate(String st){
-    if(isEmpty(st)){
-        return 0;
+    private String dilimter;
+    {
+        dilimter = ",|\n|;|\\*";
     }
-    return strtoint(st);
+    public int calculate(String st) throws Exception {
+        String[] str=st.split(dilimter);if(isEmpty(st)){
+        return 0;
+    }else if(st.length()==1){
+        return strtoint(st);
+    }else{
+        return sum(str);
+    }
+
+    }
+    private int sum(String[]stt) throws Exception {
+        int sum=0;
+        for (int i=0;i<stt.length;i++){
+                sum+=Integer.parseInt(stt[i]);
+        }
+        return sum ;
     }
     private boolean isEmpty(String st){
         return st.isEmpty();

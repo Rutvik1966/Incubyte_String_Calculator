@@ -8,11 +8,15 @@ public class string_test_case {
         sc=new String_Calculato();
     }
     @Test
-    public void empty_string()  {
+    public void empty_string() throws Exception {
        assertEquals(sc.calculate(""),0);
     }
     @Test
     public void singlenumber() throws Exception{
         assertEquals(sc.calculate("1"),1);
+    }
+    @Test
+    public void two_number_delimited_commas() throws Exception{
+        assertEquals(sc.calculate("1,2"),3);
     }
 }
