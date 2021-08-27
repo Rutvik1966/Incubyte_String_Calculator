@@ -15,7 +15,11 @@ public class String_Calculato {
     }
     private int sum(String[]stt) throws Exception {
         int sum=0;
-
+        for (int i=0;i<stt.length;i++){
+            if(Integer.parseInt(stt[i])<0){
+                throw new Exception("Negative Number!");
+            }
+        }
         for (int i=0;i<stt.length;i++){
             if(Integer.parseInt(stt[i])>=1000){
                 continue;

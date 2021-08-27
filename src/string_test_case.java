@@ -31,4 +31,8 @@ public class string_test_case {
     public void n_number_delimited_newline() throws Exception{
         assertEquals(sc.calculate("1\n2,3"),6);
     }
+    @Test(expected = Exception.class)
+    public void n_negative_number() throws Exception{
+        sc.calculate("-1");
+    }
 }
