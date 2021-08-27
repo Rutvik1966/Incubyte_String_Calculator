@@ -11,4 +11,8 @@ public class string_test_case {
     public void empty_string()  {
        assertEquals(sc.calculate(""),0);
     }
+    @Test
+    public void singlenumber() throws Exception{
+        assertEquals(sc.calculate("1"),1);
+    }
 }
