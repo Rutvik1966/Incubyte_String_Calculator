@@ -23,4 +23,8 @@ public class string_test_case {
     public void two_number_delimited_newline() throws Exception{
         assertEquals(sc.calculate("1\n2"),3);
     }
+    @Test
+    public void n_number_delimited_commas() throws Exception{
+        assertEquals(sc.calculate("1,2,3"),6);
+    }
 }
