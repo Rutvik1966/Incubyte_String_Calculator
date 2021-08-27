@@ -43,4 +43,9 @@ public class string_test_case {
     public void n_number_dilimited() throws Exception{
         assertEquals(sc.calculate("//;\n1;2"),3);
     }
+
+    @Test
+    public void n_number_extra_dilimited() throws Exception{
+        assertEquals(sc.calculate("//;\n1*2"),3);
+    }
 }
