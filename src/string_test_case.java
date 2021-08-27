@@ -35,4 +35,8 @@ public class string_test_case {
     public void n_negative_number() throws Exception{
         sc.calculate("-1");
     }
+    @Test
+    public void n_number_greater_1000() throws Exception{
+        assertEquals(sc.calculate("2,1000"),2);
+    }
 }
