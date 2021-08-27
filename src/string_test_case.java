@@ -39,4 +39,8 @@ public class string_test_case {
     public void n_number_greater_1000() throws Exception{
         assertEquals(sc.calculate("2,1000"),2);
     }
+    @Test
+    public void n_number_dilimited() throws Exception{
+        assertEquals(sc.calculate("//;\n1;2"),3);
+    }
 }

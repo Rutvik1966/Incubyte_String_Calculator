@@ -4,14 +4,22 @@ public class String_Calculato {
         dilimter = ",|\n|;|\\*";
     }
     public int calculate(String st) throws Exception {
-        String[] str=st.split(dilimter);if(isEmpty(st)){
+        String[] str=st.split(dilimter);
+        if(isEmpty(st)){
         return 0;
     }else if(st.length()==1){
         return strtoint(st);
-    }else{
+    }else if(st.startsWith("//")){
+            return trimsum(st);
+        }else{
         return sum(str);
     }
-
+    }
+    private int trimsum(String st) throws Exception {
+        String no=st;
+        String str=st.substring(4);
+        String[] strarr=str.split(dilimter);
+        return sum(strarr);
     }
     private int sum(String[]stt) throws Exception {
         int sum=0;
